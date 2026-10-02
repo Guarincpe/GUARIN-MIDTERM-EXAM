@@ -1,0 +1,30 @@
+import tkinter as tk
+
+
+class ColorApp:
+    def __init__(self, window):
+        self.window = window
+
+        self.window.title("Special Midterm Exam in OOP")
+        self.window.geometry("800x650")
+
+        self.button = tk.Button(
+            self.window,
+            text="Click to Change Color",
+            font=("Arial", 12),
+            command=self.change_color
+        )
+
+        self.button.place(x=290, y=330)
+
+    def change_color(self):
+        self.button.configure(bg="yellow")
+
+
+def main():
+    window = tk.Tk()
+    app = ColorApp(window)
+    window.mainloop()
+
+
+main()
