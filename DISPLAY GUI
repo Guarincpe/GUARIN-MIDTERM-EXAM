@@ -18,7 +18,7 @@ entry2 = tk.Entry(root, font=("Arial", 16), width=24, bd=4)
 entry2.place(x=395, y=272)
 
 button = tk.Button(root, text="Click to display your Fullname", fg="red",
-                   command=display_name())
+                   command=display_name)
 button.place(x=82, y=272)
 
 root.mainloop()
