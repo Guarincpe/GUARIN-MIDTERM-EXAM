@@ -1,0 +1,24 @@
+import tkinter as tk
+
+root = tk.Tk()
+root.title("Midterm in OOP")
+root.geometry("790x440")
+
+def display_name():
+    entry2.delete(0, tk.END)
+    entry2.insert(0, entry1.get())
+
+label = tk.Label(root, text="Enter your fullname:", fg="red")
+label.place(x=85, y=210)
+
+entry1 = tk.Entry(root, font=("Arial", 16), width=24, bd=4)
+entry1.place(x=395, y=210)
+
+entry2 = tk.Entry(root, font=("Arial", 16), width=24, bd=4)
+entry2.place(x=395, y=272)
+
+button = tk.Button(root, text="Click to display your Fullname", fg="red",
+                   command=display_name())
+button.place(x=82, y=272)
+
+root.mainloop()
